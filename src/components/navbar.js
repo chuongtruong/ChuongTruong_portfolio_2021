@@ -56,7 +56,7 @@ const LogoContainer = styled.div`
     flex: 1;
     display: flex;
     img {
-        height: 3.5rem;
+        height: 3rem;
         cursor: pointer;
     }
 `;
@@ -102,11 +102,10 @@ const NavLinks = styled.ul`
     flex: 2;
     justify-content: space-around;
     
-    
     li {
         list-style: none;
         padding: 10px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         position: relative;
         

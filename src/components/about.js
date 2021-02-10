@@ -59,12 +59,12 @@ const Container = styled.div`
     @media (max-width: 974px){
         flex-direction: column-reverse;
         h1{
-        font-size: 32px;
+        font-size: 50px;
         line-height: 3rem;
         }
 
         h2{
-            font-size: 20px;
+            font-size: 30px;
             line-height: 4rem;  
         }
 

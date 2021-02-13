@@ -9,7 +9,9 @@ const Navbar = () => {
     return (
         <Nav>
             <LogoContainer>
-                <img src={Ctlogo} />
+                <Link onClick={(e) => { setIsOpen(!isOpen);}} to="/about">
+                    <img src={Ctlogo} />
+                </Link>
             </LogoContainer>
             <Hamburger onClick={(e) => {
                 setIsOpen(!isOpen);

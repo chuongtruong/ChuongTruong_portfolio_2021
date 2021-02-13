@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Typical from 'react-typical'
+import profile from '../assets/profile.jpg'
 
 const About = () => {
     return (
@@ -24,7 +25,7 @@ const About = () => {
             </Left>
 
             <Right>
-                <img src="https://www.nicepng.com/png/detail/522-5226533_get-beyond-the-usual-suspects-profile-pic-icon.png" />
+                <img src={profile} alt="before COVID-19 :("/>
             </Right>
         </Container>
     )
@@ -38,10 +39,20 @@ const Container = styled.div`
     align-items: center;
     
     img{
-        max-width:30vh;
+        max-width:35vh;
         height: auto;
-        border-radius: 50%;
+        border-radius: 2%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        -webkit-filter: grayscale(50%);
+	    filter: grayscale(50%);
+	    -webkit-transition: .3s ease-in-out;
+	    transition: .3s ease-in-out;
+        &:hover{
+            -webkit-filter: grayscale(0);
+	        filter: grayscale(0);
+        }
     }
+
     h1,h2{
         color: #3C1874;
     }
@@ -57,7 +68,12 @@ const Container = styled.div`
         color: #DE354C;
     }
     @media (max-width: 974px){
+        height: auto;
         flex-direction: column-reverse;
+        img{
+            max-width:25vh;
+            margin=top: 10vh;
+        }
         h1{
         font-size: 50px;
         line-height: 3rem;
@@ -75,7 +91,13 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-   flex: 1;
+    flex: 2;
+    flex-direction: column;
+   @media (max-width: 974px){
+       display: flex;
+       align-items:start;
+       margin-bottom: 10vh;
+    }
 `;
 
 const Right = styled.div`
@@ -83,5 +105,7 @@ const Right = styled.div`
    @media (max-width: 974px){
        display: flex;
        align-items:center;
+       margin-bottom: vh;
+       margin-bottom: 10vh;
     }
 `;
